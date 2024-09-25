@@ -1,3 +1,21 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "types": ["react-native", "jest", "node"],
+    "typeRoots": ["src/types", "./node_modules/@types"],
+    "baseUrl": "./src",
+    "paths": {
+      "ui/*": ["./ui/*"],
+      "constants/*": ["./constants/*"],
+      "config/*": ["./config/*"],
+      "data/*": ["./data/*"],
+      "libs/*": ["./libs/*"],
+      "types/*": ["./types/*"]
+    },
+    "noImplicitAny": false
+  },
+  "esModuleInterop": true,
+  /* Completeness */
+  "skipLibCheck": true /* Skip type checking all .d.ts files. */
 }
